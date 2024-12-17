@@ -6,7 +6,7 @@
 /*   By: aaviral <aaviral@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/16 16:20:22 by aaviral           #+#    #+#             */
-/*   Updated: 2024/12/16 19:37:24 by aaviral          ###   ########.fr       */
+/*   Updated: 2024/12/17 15:27:11 by aaviral          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,10 @@ void	ft_putchar(char c, size_t *len)
 void    ft_putstr(char *str, size_t *len)
 {
     while (*str)
+	{
         write(1, str++, 1);
-    (*len)++;
+    	(*len)++;
+	}
 }
 
 void	ft_putnbr(int n, size_t *len)
