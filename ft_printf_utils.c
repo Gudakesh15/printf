@@ -10,22 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
-#include <unistd.h>
-
+#include "ft_printf.h"
 
 void	ft_putchar(char c, size_t *len)
 {
 	write(1, &c, 1);
-    (*len)++;
+	(*len)++;
 }
 
-void    ft_putstr(char *str, size_t *len)
+void	ft_putstr(char *str, size_t *len)
 {
-    while (*str)
+	while (*str)
 	{
-        write(1, str++, 1);
-    	(*len)++;
+		write(1, str++, 1);
+		(*len)++;
 	}
 }
 
@@ -44,7 +42,7 @@ void	ft_putnbr(int n, size_t *len)
 		ft_putnbr(num / 10, len);
 	digit = num % 10 + '0';
 	write(1, &digit, 1);
-    (*len)++;
+	(*len)++;
 }
 
 void	ft_putunbr(unsigned int n, size_t *len)
@@ -57,5 +55,5 @@ void	ft_putunbr(unsigned int n, size_t *len)
 		ft_putnbr(num / 10, len);
 	digit = num % 10 + '0';
 	write(1, &digit, 1);
-    (*len)++;
+	(*len)++;
 }
