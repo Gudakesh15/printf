@@ -20,6 +20,11 @@ void	ft_putchar(char c, size_t *len)
 
 void	ft_putstr(char *str, size_t *len)
 {
+	if (!str)
+	{
+		ft_putstr("(null)", len);
+		return ;
+	}
 	while (*str)
 	{
 		write(1, str++, 1);
@@ -37,6 +42,7 @@ void	ft_putnbr(int n, size_t *len)
 	{
 		write(1, "-", 1);
 		num = -1 * num;
+		(*len)++;
 	}
 	if (num > 9)
 		ft_putnbr(num / 10, len);
